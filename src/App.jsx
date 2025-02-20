@@ -19,12 +19,14 @@ const GlobalStyle = createGlobalStyle`
   * {
   margin: 0; 
   padding: 0;
+  font-size: 20px;
   }
   input {
     width: 90%;
   }
   span { 
-    color: green;
+    color: #edff65;
+    font: bolder;
     &:hover {
       background-color: white-space;
     }
@@ -41,7 +43,7 @@ const App = () => {
     <>
     <GlobalStyle/>
       <Container input1={input1} input2={input2} input3={input3} input4={input4}>
-        <div> rgba 값을 이용한 배경색 바꾸기 </div>
+        <div> [rgba 값을 이용한 배경색 바꾸기] </div>
         <input 
         type="range" 
         value={input1} 
@@ -49,7 +51,7 @@ const App = () => {
         min={0}
         max={255}
         />
-        <span>{input1}</span>
+        <span>R : {input1}</span>
         <input 
         type="range" 
         value={input2} 
@@ -57,7 +59,7 @@ const App = () => {
         min={0}
         max={255}
         />
-        <span>{input2}</span>
+        <span>G : {input2}</span>
         <input 
         type="range" 
         value={input3} 
@@ -65,7 +67,7 @@ const App = () => {
         min={0}
         max={255}
         />
-        <span>{input3}</span>
+        <span>B : {input3}</span>
         <input 
         type="range" 
         value={input4} 
@@ -74,7 +76,7 @@ const App = () => {
         step={0.1}
         max={1}
         />
-        <span>{input4}</span>
+        <span>A : {input4}</span>
 
       </Container>
       </>
